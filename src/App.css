@@ -1,0 +1,219 @@
+/* Reset */
+body {
+  min-height: 100vh; /* allow the page to grow and let sections fill viewport */
+  background-color: #282c34;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header bar */
+header {
+  background-color: #282c34;
+  top: 0;
+  min-height: 10vh;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+}
+
+/* Horizontal nav: logo + nav items */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* increased spacing between items */
+  width: 100%;
+}
+
+/* Logo list-item: give extra space to the right of the logo */
+.img {
+  margin-right: 100px;
+  padding: 0;
+}
+
+/* Navigation item styles */
+header ul li {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Style both regular links and React Router Links */
+header ul li a:not(.brand),
+header ul li:not(.img):not(.push-right) {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Animated underline effect */
+header ul li:not(.img):not(.push-right)::after,
+header ul li a:not(.brand)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #0094ff;
+  transition: width 0.2s ease;
+}
+
+/* Activate underline on hover */
+header ul li:not(.img):not(.push-right):hover::after,
+header ul li:hover a:not(.brand)::after {
+  width: 100%;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  display: inline-block; /* allow images to sit inline with text */
+  vertical-align: middle;
+}
+
+/* Brand (logo + site name) */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .brand img {
+    height: 28px;
+    width: 28px;
+  }
+  .img { margin-right: 0.8rem; }
+}
+
+/* Make nav children inline (image + paragraph) */
+nav {
+  display: flex;
+  align-items: center; /* vertically center img and text */
+  gap: 1rem;
+  margin: 50px;
+  padding: 1rem;
+}
+
+nav img{
+  margin-left: 70px;
+}
+
+nav p {
+  margin-left: 200px; /* remove default top margin so text aligns with image */
+  color: #fff;
+  background-color: #3f444e;
+  max-width: 720px;
+  padding: 20px;border-radius: 5px;
+}
+
+/* push this list-item to the far right */
+.push-right {
+  margin-left: auto;
+}
+
+/* set the input width explicitly so it's easy to change */
+.push-right input {
+  width: 200px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Input/button styles inside header */
+ul li input {
+  padding: 0 0.75rem;
+  height: 32px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+ul li input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+input:hover {
+  border-color: #0094ff;
+}
+
+/* Special styles for Purchase, Login, and Sign Up buttons */
+.purchase,
+.LogIn,
+.SignIn {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.purchase:hover,
+.LogIn:hover,
+.SignIn:hover {
+  color: #0094ff;
+}
+
+/* nav image sizing */
+nav img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.header1 {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+
+}
+.header2 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+p {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+/* Growth graph image shown on the homepage */
+.graph {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  max-width: 680px; /* reduced from 880 */
+  width: calc(100% - 3rem);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+}
+
+@media (max-width: 900px) {
+  .graph { max-width: 560px; width: calc(100% - 2rem); }
+}
+
+@media (max-width: 480px) {
+  .graph { max-width: 320px; width: calc(100% - 1.5rem); margin: 0.8rem auto; border-radius: 6px; }
+}

@@ -1,0 +1,147 @@
+
+/* scope login-specific background so it doesn't override the whole app */
+*{
+    color: white;
+}
+
+.login-page{
+    background: linear-gradient(135deg, #1B8AF1, #B58DED);
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;     /* center vertically */
+    justify-content: center; /* center horizontally */
+    padding: 2rem;
+}
+
+h4{
+    font-family: 'Segoe UI', bold;
+    font-size: 28px;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.cvUpload{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    background-color: aquamarine;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+form{
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.text_area{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08), 0 0 12px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+}
+
+.text_input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.btn{
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 240px;
+    height: 48px;
+    border-radius: 24px;
+    background: #B58DED;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(181, 141, 237, 0.7), 0 6px 20px 0 rgba(181, 141, 237, 0.9);
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login{
+    display: block;
+    background: #FFFFFF;
+    width: 420px;
+    max-width: 95%;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    box-sizing: border-box;
+}
+
+input{
+    color: black;
+}
+
+.link{
+    color: #0E4579;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* File upload control styles */
+.file-area {
+    margin-left: 60px;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.file-label {
+    font-size: 14px;
+    color: #fff;
+    background: #0E4579;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-info {
+    font-size: 13px;
+    color: #0E4579;
+}
+
+.file-error {
+    font-size: 13px;
+    color: #b00020;
+}
+
+.error-message {
+    background-color: rgba(176, 0, 32, 0.1);
+    border: 1px solid #b00020;
+    color: #b00020;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    text-align: left;
+}
